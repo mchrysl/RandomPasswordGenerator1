@@ -39,6 +39,7 @@ namespace RandomPasswordGenerator1
             MessageBox.Show("Well, you clicked the submit button.\r\nNow to make it work.", "", MessageBoxButtons.OK);
         }
 
+        /*
         private void lowerAZ_CheckedChanged(object sender, EventArgs e)
         {
             RoutineToCheckBoxes();
@@ -60,26 +61,10 @@ namespace RandomPasswordGenerator1
                 numberPasswords.Enabled = false;
             }
             */
-        }
-
-        private void CharChooseBox_Enter(object sender, EventArgs e)
-        {
-            //there must be 2 character sets chosen
-            int setsChosen = 0;
-            if (upperAZ.Checked == true) setsChosen++;
-            if (lowerAZ.Checked == true) setsChosen++;
-            if (digits.Checked == true) setsChosen++;
-            if (specialChar.Checked == true) setsChosen++;
-            if (setsChosen >= 2)
-            {
-                mustChooseTwo.Visible = false;
-            }
-            else
-            {
-                mustChooseTwo.Visible = true;
-            }
-        }
-
+        //}
+        
+      
+        /*
         private void digits_CheckedChanged(object sender, EventArgs e)
         {
             RoutineToCheckBoxes();
@@ -101,8 +86,8 @@ namespace RandomPasswordGenerator1
                 numberPasswords.Enabled = false;
             }
             */
-        }
-
+        //}
+        /*
         private void specialChar_CheckedChanged(object sender, EventArgs e)
         {
             RoutineToCheckBoxes();
@@ -124,14 +109,15 @@ namespace RandomPasswordGenerator1
                 numberPasswords.Enabled = false;
             }
             */
-        }
-
+        //}
+        /*
         private void upperAZ_CheckedChanged(object sender, EventArgs e)
         {
             RoutineToCheckBoxes();
         }
-        
-        private void RoutineToCheckBoxes()
+        */
+
+        private void RoutineToCheckBoxes(object sender, EventArgs e)
         {
             //there must be 2 character sets chosen
             int setsChosen = 0;

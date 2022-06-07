@@ -86,7 +86,7 @@
             this.lowerAZ.TabIndex = 2;
             this.lowerAZ.Text = "Alpha Lower Case (a-z)";
             this.lowerAZ.UseVisualStyleBackColor = true;
-            this.lowerAZ.CheckedChanged += new System.EventHandler(this.lowerAZ_CheckedChanged);
+            this.lowerAZ.CheckedChanged += new System.EventHandler(this.RoutineToCheckBoxes);
             // 
             // upperAZ
             // 
@@ -97,7 +97,7 @@
             this.upperAZ.TabIndex = 3;
             this.upperAZ.Text = "Alpha Upper Case (A-Z)";
             this.upperAZ.UseVisualStyleBackColor = true;
-            this.upperAZ.CheckedChanged += new System.EventHandler(this.upperAZ_CheckedChanged);
+            this.upperAZ.CheckedChanged += new System.EventHandler(this.RoutineToCheckBoxes);
             // 
             // digits
             // 
@@ -108,7 +108,7 @@
             this.digits.TabIndex = 4;
             this.digits.Text = "Numeric Digit (0-9)";
             this.digits.UseVisualStyleBackColor = true;
-            this.digits.CheckedChanged += new System.EventHandler(this.digits_CheckedChanged);
+            this.digits.CheckedChanged += new System.EventHandler(this.RoutineToCheckBoxes);
             // 
             // specialChar
             // 
@@ -119,7 +119,7 @@
             this.specialChar.TabIndex = 5;
             this.specialChar.Text = "Special Characters ( ! @ # $ % & * )";
             this.specialChar.UseVisualStyleBackColor = true;
-            this.specialChar.CheckedChanged += new System.EventHandler(this.specialChar_CheckedChanged);
+            this.specialChar.CheckedChanged += new System.EventHandler(this.RoutineToCheckBoxes);
             // 
             // CharChooseBox
             // 
@@ -134,7 +134,6 @@
             this.CharChooseBox.TabIndex = 7;
             this.CharChooseBox.TabStop = false;
             this.CharChooseBox.Text = "Choose which characters will appear in your password(s):";
-            this.CharChooseBox.Enter += new System.EventHandler(this.CharChooseBox_Enter);
             // 
             // mustChooseTwo
             // 

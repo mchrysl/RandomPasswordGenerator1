@@ -39,92 +39,33 @@ namespace RandomPasswordGenerator1
             MessageBox.Show("Well, you clicked the submit button.\r\nNow to make it work.", "", MessageBoxButtons.OK);
         }
 
-        /*
-        private void lowerAZ_CheckedChanged(object sender, EventArgs e)
-        {
-            RoutineToCheckBoxes();
-            /*
-            //there must be 2 character sets chosen
-            int setsChosen = 0;
-            if (upperAZ.Checked == true) setsChosen++;
-            if (lowerAZ.Checked == true) setsChosen++;
-            if (digits.Checked == true) setsChosen++;
-            if (specialChar.Checked == true) setsChosen++;
-            if (setsChosen >= 2)
-            {
-                mustChooseTwo.Visible = false;
-                numberPasswords.Enabled = true;
-            }
-            else
-            {
-                mustChooseTwo.Visible = true;
-                numberPasswords.Enabled = false;
-            }
-            */
-        //}
         
-      
-        /*
-        private void digits_CheckedChanged(object sender, EventArgs e)
-        {
-            RoutineToCheckBoxes();
-            /*
-            //there must be 2 character sets chosen
-            int setsChosen = 0;
-            if (upperAZ.Checked == true) setsChosen++;
-            if (lowerAZ.Checked == true) setsChosen++;
-            if (digits.Checked == true) setsChosen++;
-            if (specialChar.Checked == true) setsChosen++;
-            if (setsChosen >= 2)
-            {
-                mustChooseTwo.Visible = false;
-                numberPasswords.Enabled = true;
-            }
-            else
-            {
-                mustChooseTwo.Visible = true;
-                numberPasswords.Enabled = false;
-            }
-            */
-        //}
-        /*
-        private void specialChar_CheckedChanged(object sender, EventArgs e)
-        {
-            RoutineToCheckBoxes();
-            /*
-            //there must be 2 character sets chosen
-            int setsChosen = 0;
-            if (upperAZ.Checked == true) setsChosen++;
-            if (lowerAZ.Checked == true) setsChosen++;
-            if (digits.Checked == true) setsChosen++;
-            if (specialChar.Checked == true) setsChosen++;
-            if (setsChosen >= 2)
-            {
-                mustChooseTwo.Visible = false;
-                numberPasswords.Enabled = true;
-            }
-            else
-            {
-                mustChooseTwo.Visible = true;
-                numberPasswords.Enabled = false;
-            }
-            */
-        //}
-        /*
-        private void upperAZ_CheckedChanged(object sender, EventArgs e)
-        {
-            RoutineToCheckBoxes();
-        }
-        */
 
         private void RoutineToCheckBoxes(object sender, EventArgs e)
         {
+            int maxCharacters = 0;
             //there must be 2 character sets chosen
             int setsChosen = 0;
-            if (upperAZ.Checked == true) setsChosen++;
-            if (lowerAZ.Checked == true) setsChosen++;
-            if (digits.Checked == true) setsChosen++;
-            if (specialChar.Checked == true) setsChosen++;
+            if (upperAZ.Checked == true)
+            {
+                setsChosen++;
+                maxCharacters += 26;
+            }
+            if (lowerAZ.Checked == true)
+            {
+                setsChosen++;
+                maxCharacters += 26;
+            }
+            if (digits.Checked == true)
+            {
+                setsChosen++;
+                maxCharacters += 10;
+            }
+            if (specialChar.Checked == true)
+            {
+                setsChosen++;
+                maxCharacters += 5;
+            }
             if (setsChosen >= 2)
             {
                 mustChooseTwo.Visible = false;
@@ -135,6 +76,10 @@ namespace RandomPasswordGenerator1
                 mustChooseTwo.Visible = true;
                 numberPasswords.Enabled = false;
             }
+
+            
+
+
         }
 
     }

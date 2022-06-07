@@ -180,6 +180,7 @@
             // OutputText
             // 
             this.OutputText.AutoSize = true;
+            this.OutputText.Enabled = false;
             this.OutputText.Location = new System.Drawing.Point(29, 51);
             this.OutputText.Name = "OutputText";
             this.OutputText.Size = new System.Drawing.Size(67, 19);
@@ -191,6 +192,7 @@
             // OutputCSV
             // 
             this.OutputCSV.AutoSize = true;
+            this.OutputCSV.Enabled = false;
             this.OutputCSV.Location = new System.Drawing.Point(29, 28);
             this.OutputCSV.Name = "OutputCSV";
             this.OutputCSV.Size = new System.Drawing.Size(65, 19);

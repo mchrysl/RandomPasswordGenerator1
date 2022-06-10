@@ -38,13 +38,14 @@
             this.mustChooseTwo = new System.Windows.Forms.Label();
             this.HowManyBox = new System.Windows.Forms.GroupBox();
             this.OutputPrefBox = new System.Windows.Forms.GroupBox();
-            this.OutputScreen = new System.Windows.Forms.RadioButton();
-            this.OutputText = new System.Windows.Forms.RadioButton();
-            this.OutputCSV = new System.Windows.Forms.RadioButton();
+            this.rbtnOutputScreen = new System.Windows.Forms.RadioButton();
+            this.rbtnOutputText = new System.Windows.Forms.RadioButton();
+            this.rbtnOutputCSV = new System.Windows.Forms.RadioButton();
             this.genPasswdBtn = new System.Windows.Forms.Button();
             this.FormInternalLbl = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.lblPasswordList = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numberPasswords)).BeginInit();
             this.CharChooseBox.SuspendLayout();
             this.HowManyBox.SuspendLayout();
@@ -54,7 +55,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 19);
+            this.label1.Location = new System.Drawing.Point(8, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 15);
             this.label1.TabIndex = 0;
@@ -149,7 +150,7 @@
             // 
             this.HowManyBox.Controls.Add(this.label1);
             this.HowManyBox.Controls.Add(this.numberPasswords);
-            this.HowManyBox.Location = new System.Drawing.Point(402, 122);
+            this.HowManyBox.Location = new System.Drawing.Point(40, 332);
             this.HowManyBox.Name = "HowManyBox";
             this.HowManyBox.Size = new System.Drawing.Size(329, 50);
             this.HowManyBox.TabIndex = 8;
@@ -157,55 +158,54 @@
             // 
             // OutputPrefBox
             // 
-            this.OutputPrefBox.Controls.Add(this.OutputScreen);
-            this.OutputPrefBox.Controls.Add(this.OutputText);
-            this.OutputPrefBox.Controls.Add(this.OutputCSV);
-            this.OutputPrefBox.Location = new System.Drawing.Point(431, 185);
+            this.OutputPrefBox.Controls.Add(this.rbtnOutputScreen);
+            this.OutputPrefBox.Controls.Add(this.rbtnOutputText);
+            this.OutputPrefBox.Controls.Add(this.rbtnOutputCSV);
+            this.OutputPrefBox.Location = new System.Drawing.Point(40, 435);
             this.OutputPrefBox.Name = "OutputPrefBox";
             this.OutputPrefBox.Size = new System.Drawing.Size(200, 100);
             this.OutputPrefBox.TabIndex = 9;
             this.OutputPrefBox.TabStop = false;
             this.OutputPrefBox.Text = "Pick the output preference:";
             // 
-            // OutputScreen
+            // rbtnOutputScreen
             // 
-            this.OutputScreen.AutoSize = true;
-            this.OutputScreen.Location = new System.Drawing.Point(29, 74);
-            this.OutputScreen.Name = "OutputScreen";
-            this.OutputScreen.Size = new System.Drawing.Size(172, 19);
-            this.OutputScreen.TabIndex = 2;
-            this.OutputScreen.TabStop = true;
-            this.OutputScreen.Text = "To the screen (new window)";
-            this.OutputScreen.UseVisualStyleBackColor = true;
+            this.rbtnOutputScreen.AutoSize = true;
+            this.rbtnOutputScreen.Checked = true;
+            this.rbtnOutputScreen.Location = new System.Drawing.Point(29, 74);
+            this.rbtnOutputScreen.Name = "rbtnOutputScreen";
+            this.rbtnOutputScreen.Size = new System.Drawing.Size(172, 19);
+            this.rbtnOutputScreen.TabIndex = 2;
+            this.rbtnOutputScreen.TabStop = true;
+            this.rbtnOutputScreen.Text = "To the screen (new window)";
+            this.rbtnOutputScreen.UseVisualStyleBackColor = true;
             // 
-            // OutputText
+            // rbtnOutputText
             // 
-            this.OutputText.AutoSize = true;
-            this.OutputText.Enabled = false;
-            this.OutputText.Location = new System.Drawing.Point(29, 51);
-            this.OutputText.Name = "OutputText";
-            this.OutputText.Size = new System.Drawing.Size(67, 19);
-            this.OutputText.TabIndex = 1;
-            this.OutputText.TabStop = true;
-            this.OutputText.Text = "Text File";
-            this.OutputText.UseVisualStyleBackColor = true;
+            this.rbtnOutputText.AutoSize = true;
+            this.rbtnOutputText.Enabled = false;
+            this.rbtnOutputText.Location = new System.Drawing.Point(29, 51);
+            this.rbtnOutputText.Name = "rbtnOutputText";
+            this.rbtnOutputText.Size = new System.Drawing.Size(67, 19);
+            this.rbtnOutputText.TabIndex = 1;
+            this.rbtnOutputText.Text = "Text File";
+            this.rbtnOutputText.UseVisualStyleBackColor = true;
             // 
-            // OutputCSV
+            // rbtnOutputCSV
             // 
-            this.OutputCSV.AutoSize = true;
-            this.OutputCSV.Enabled = false;
-            this.OutputCSV.Location = new System.Drawing.Point(29, 28);
-            this.OutputCSV.Name = "OutputCSV";
-            this.OutputCSV.Size = new System.Drawing.Size(65, 19);
-            this.OutputCSV.TabIndex = 0;
-            this.OutputCSV.TabStop = true;
-            this.OutputCSV.Text = "CSV file";
-            this.OutputCSV.UseVisualStyleBackColor = true;
+            this.rbtnOutputCSV.AutoSize = true;
+            this.rbtnOutputCSV.Enabled = false;
+            this.rbtnOutputCSV.Location = new System.Drawing.Point(29, 28);
+            this.rbtnOutputCSV.Name = "rbtnOutputCSV";
+            this.rbtnOutputCSV.Size = new System.Drawing.Size(65, 19);
+            this.rbtnOutputCSV.TabIndex = 0;
+            this.rbtnOutputCSV.Text = "CSV file";
+            this.rbtnOutputCSV.UseVisualStyleBackColor = true;
             // 
             // genPasswdBtn
             // 
             this.genPasswdBtn.Enabled = false;
-            this.genPasswdBtn.Location = new System.Drawing.Point(296, 332);
+            this.genPasswdBtn.Location = new System.Drawing.Point(37, 569);
             this.genPasswdBtn.Name = "genPasswdBtn";
             this.genPasswdBtn.Size = new System.Drawing.Size(181, 54);
             this.genPasswdBtn.TabIndex = 10;
@@ -226,7 +226,7 @@
             // 
             // exitBtn
             // 
-            this.exitBtn.Location = new System.Drawing.Point(668, 356);
+            this.exitBtn.Location = new System.Drawing.Point(688, 618);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(100, 30);
             this.exitBtn.TabIndex = 12;
@@ -237,18 +237,28 @@
             // richTextBox1
             // 
             this.richTextBox1.Enabled = false;
-            this.richTextBox1.Location = new System.Drawing.Point(296, 414);
+            this.richTextBox1.Location = new System.Drawing.Point(503, 155);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(181, 186);
+            this.richTextBox1.Size = new System.Drawing.Size(181, 388);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
+            // 
+            // lblPasswordList
+            // 
+            this.lblPasswordList.AutoSize = true;
+            this.lblPasswordList.Location = new System.Drawing.Point(502, 123);
+            this.lblPasswordList.Name = "lblPasswordList";
+            this.lblPasswordList.Size = new System.Drawing.Size(138, 15);
+            this.lblPasswordList.TabIndex = 14;
+            this.lblPasswordList.Text = "Generated Password List:";
             // 
             // RandPasswdGen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 660);
+            this.Controls.Add(this.lblPasswordList);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.FormInternalLbl);
@@ -282,13 +292,14 @@
         private GroupBox CharChooseBox;
         private GroupBox HowManyBox;
         private GroupBox OutputPrefBox;
-        private RadioButton OutputScreen;
-        private RadioButton OutputText;
-        private RadioButton OutputCSV;
+        private RadioButton rbtnOutputScreen;
+        private RadioButton rbtnOutputText;
+        private RadioButton rbtnOutputCSV;
         private Button genPasswdBtn;
         private Label FormInternalLbl;
         private Button exitBtn;
         private Label mustChooseTwo;
         private RichTextBox richTextBox1;
+        private Label lblPasswordList;
     }
 }

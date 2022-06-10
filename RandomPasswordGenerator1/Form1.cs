@@ -51,17 +51,6 @@ namespace RandomPasswordGenerator1
         }
 
 
-        /*public class PasswordValue
-        {
-            public PasswordValue(string s)
-            {
-                _value = s;
-            }
-            public string Value { get { return _value; } set { _value = value; } }
-            string _value;
-        }
-    */
-
         private void GenPasswdBtn_Click(object sender, EventArgs e)
         {
             
@@ -70,7 +59,6 @@ namespace RandomPasswordGenerator1
             List<string> passwordList = new();
             //Bring in number of passwords to generate
             int numberOfPasswords = (int)numberPasswords.Value;
-            MessageBox.Show("Create " + numberOfPasswords + " Passwords", "", MessageBoxButtons.OK);
             
             //Bring in values from screen and put appropriate list into the charSourceTable
             List<string> charInputs = new();
@@ -116,18 +104,12 @@ namespace RandomPasswordGenerator1
                 for (int ch = 0; ch < 8; ch++)
                 {
                     //randomly choose one of the lists in the table
-                    /*  TEST
-                    if (ch == 0)
-                    {
-                        MessageBox.Show("charSourceTable.Count = " + charSourceTable.Count, "", MessageBoxButtons.OK);
-                    }
-                    */
                     whichList = rand.Next(0, charSourceTable.Count);
-                    //TEST ** MessageBox.Show("Which list? " + whichList, "", MessageBoxButtons.OK);
+                    
                     //randomly choose one of the characters in the list
                     whichChar = rand.Next(0, charSourceTable[whichList].Count);
                     newChar = charSourceTable[whichList][whichChar];
-                    //TEST ** MessageBox.Show("Character to add: " + newChar, "", MessageBoxButtons.OK);
+                    
                     //add new character to password list
                     passwordCharList.Add(newChar);
                 }
@@ -135,7 +117,7 @@ namespace RandomPasswordGenerator1
                 //convert new password to string
                 newPassword = new string(passwordCharList.ToArray());       //***This was key for making string from List<char> *NOT* the ToString() function***
                 string message = "New Password: " + newPassword;
-                MessageBox.Show(message, "", MessageBoxButtons.OK);
+                
                 
                 //search the password list to see if the new password is a duplicate
                 
@@ -153,14 +135,14 @@ namespace RandomPasswordGenerator1
             string pwOutputStr = "";
             foreach(var s in passwordList)
             {
-                pwOutputStr += ("\n" + s);
+                pwOutputStr += (s + "\n");
             }
-            //MessageBox.Show("Your " + numberOfPasswords + " passwords:\n\r" + pwOutputStr, "", MessageBoxButtons.OK);
+            
             
             richTextBox1.Text = pwOutputStr;
             richTextBox1.Enabled = true;
 
-            //MessageBox.Show("Well, you clicked the submit button.\r\nNow to make it work.", "", MessageBoxButtons.OK);
+            
         }
 
     }

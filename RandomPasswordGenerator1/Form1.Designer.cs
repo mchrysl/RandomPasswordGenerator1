@@ -41,9 +41,10 @@
             this.OutputScreen = new System.Windows.Forms.RadioButton();
             this.OutputText = new System.Windows.Forms.RadioButton();
             this.OutputCSV = new System.Windows.Forms.RadioButton();
-            this.GenPasswdBtn = new System.Windows.Forms.Button();
+            this.genPasswdBtn = new System.Windows.Forms.Button();
             this.FormInternalLbl = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numberPasswords)).BeginInit();
             this.CharChooseBox.SuspendLayout();
             this.HowManyBox.SuspendLayout();
@@ -201,15 +202,16 @@
             this.OutputCSV.Text = "CSV file";
             this.OutputCSV.UseVisualStyleBackColor = true;
             // 
-            // GenPasswdBtn
+            // genPasswdBtn
             // 
-            this.GenPasswdBtn.Location = new System.Drawing.Point(296, 332);
-            this.GenPasswdBtn.Name = "GenPasswdBtn";
-            this.GenPasswdBtn.Size = new System.Drawing.Size(181, 54);
-            this.GenPasswdBtn.TabIndex = 10;
-            this.GenPasswdBtn.Text = "Generate Passwords";
-            this.GenPasswdBtn.UseVisualStyleBackColor = true;
-            this.GenPasswdBtn.Click += new System.EventHandler(this.GenPasswdBtn_Click);
+            this.genPasswdBtn.Enabled = false;
+            this.genPasswdBtn.Location = new System.Drawing.Point(296, 332);
+            this.genPasswdBtn.Name = "genPasswdBtn";
+            this.genPasswdBtn.Size = new System.Drawing.Size(181, 54);
+            this.genPasswdBtn.TabIndex = 10;
+            this.genPasswdBtn.Text = "Generate Passwords";
+            this.genPasswdBtn.UseVisualStyleBackColor = true;
+            this.genPasswdBtn.Click += new System.EventHandler(this.GenPasswdBtn_Click);
             // 
             // FormInternalLbl
             // 
@@ -224,22 +226,33 @@
             // 
             // exitBtn
             // 
-            this.exitBtn.Location = new System.Drawing.Point(667, 399);
+            this.exitBtn.Location = new System.Drawing.Point(668, 356);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(100, 30);
             this.exitBtn.TabIndex = 12;
             this.exitBtn.Text = "Exit Program";
             this.exitBtn.UseVisualStyleBackColor = true;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            this.exitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Enabled = false;
+            this.richTextBox1.Location = new System.Drawing.Point(296, 414);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(181, 186);
+            this.richTextBox1.TabIndex = 13;
+            this.richTextBox1.Text = "";
             // 
             // RandPasswdGen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 660);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.FormInternalLbl);
-            this.Controls.Add(this.GenPasswdBtn);
+            this.Controls.Add(this.genPasswdBtn);
             this.Controls.Add(this.OutputPrefBox);
             this.Controls.Add(this.HowManyBox);
             this.Controls.Add(this.CharChooseBox);
@@ -272,9 +285,10 @@
         private RadioButton OutputScreen;
         private RadioButton OutputText;
         private RadioButton OutputCSV;
-        private Button GenPasswdBtn;
+        private Button genPasswdBtn;
         private Label FormInternalLbl;
         private Button exitBtn;
         private Label mustChooseTwo;
+        private RichTextBox richTextBox1;
     }
 }

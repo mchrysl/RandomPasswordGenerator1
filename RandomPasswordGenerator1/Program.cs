@@ -19,53 +19,6 @@ namespace RandomPasswordGenerator1
 
 
 
-        /*
-        private List<List<char>> SetupCharTable(List<string> charTypes)
-        {
-            List<List<char>> result = new List<List<char>>();
-            int listIndex = 0;
-            /* Setup:
-                *      upperAlpha - a list of uppercase letters
-                *      lowerAlpha - a list of lowercase letters
-                *      numbers - a list of numbers 0 - 9)
-                *      specChar - a list of special characters (! @ # $ *)
-                *     
-                /*
-
-            foreach (string charType in charTypes)
-            {
-                switch (charType)
-                {
-                    case ("upperAlpha"):
-                        List<char> uAlpha = new()
-                        { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-                        result.Add(uAlpha);
-                        listIndex++;
-                        break;
-                    case ("lowerAlpha"):
-                        List<char> lAlpha = new ()
-                        { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
-                        result.Add(lAlpha);
-                        listIndex++;
-                        break;
-                    case ("numbers"):
-                        List<char> numbers = new () { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
-                        result.Add(numbers);
-                        listIndex++;
-                        break;
-                    case ("specialChars"):
-                        List<char> specChar = new () { '!', '@', '#', '$', '*' };
-                        result.Add(specChar);
-                        listIndex++;
-                        break;
-                    default:
-                        break;
-                }
-               
-            }
-            return result;
-        }
-
 
         /*
          * Logic:
